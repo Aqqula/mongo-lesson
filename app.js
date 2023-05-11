@@ -14,7 +14,8 @@ app.put("/tasks/:idTask", TaskController.updateTask);
 app.post("/tasks", TaskController.createTask);
 
 app.post("/tasks/:idTask/comments", CommentController.createComand);
-
+app.put("/comments/:idComment", CommentController.updateComment);
+app.delete("/comments/:idComment", CommentController.deleteComment);
 app.get("/comments", CommentController.findAllComments);
 
 app.use(errorHandle);
